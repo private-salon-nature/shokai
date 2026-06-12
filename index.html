@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライベートサロン Nature | 自律神経調整整体</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Noto Serif JP', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        cinzel: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        nature: {
+                            50: '#f4f7f5',
+                            100: '#e5ede8',
+                            200: '#ccdcd2',
+                            300: '#a3c2b1',
+                            600: '#2c4c38', /* メイン：ディープフォレスト */
+                            700: '#223b2c',
+                            800: '#192b20',
+                            900: '#111d16',
+                        },
+                        accent: {
+                            gold: '#caa867', /* アクセント：ソフトゴールド */
+                            lightgold: '#f7f4eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-serif { font-family: 'Noto Serif JP', serif; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-nature-50 text-nature-900 font-sans antialiased overflow-x-hidden selection:bg-nature-600 selection:text-white">
+
+    <header class="relative min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-nature-900 via-nature-800 to-nature-700 text-white px-4 py-16 overflow-hidden">
+        <div class="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-nature-600/20 blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-accent-gold/10 blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center z-10 space-y-8">
+            <div class="tracking-[0.2em] text-accent-gold font-cinzel text-lg md:text-xl font-semibold uppercase">
+                Private Salon Nature
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="font-serif text-2xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-wide text-white">
+                    ずっしり重い身体と、抜けない怠さから解放<br class="hidden md:inline">
+                    <span class="text-accent-gold block mt-2 md:inline md:mt-0">朝からシャキッと動ける 本来の元気な毎日へ</span>
+                </h1>
+            </div>
+
+            <div class="bg-black/20 border border-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl max-w-2xl mx-auto space-y-4 text-left font-serif text-nature-100 text-sm md:text-base leading-relaxed">
+                <ul class="space-y-2 border-b border-white/10 pb-4 mb-4">
+                    <li class="flex items-start gap-2">✔ 寝ても疲れが取れない</li>
+                    <li class="flex items-start gap-2">✔ 朝から身体が重い</li>
+                    <li class="flex items-start gap-2">✔ 肩こりや冷えが続いている</li>
+                    <li class="flex items-start gap-2">✔ 頑張りたいのに、身体がついてこない</li>
+                </ul>
+                <p class="text-white font-bold text-center text-base md:text-lg">
+                    そんな不調は、あなたの甘えではなく、自律神経の乱れによるサインかもしれません！
+                </p>
+                <p class="text-center text-xs md:text-sm text-nature-200 pt-1">
+                    プライベートサロン Natureでは、自律神経調整に特化した施術で、頑張りすぎてこわばった身体をやさしく整え、朝から動きやすい身体づくりをサポートします。
+                </p>
+            </div>
+
+            <div class="max-w-lg mx-auto bg-gradient-to-br from-accent-lightgold to-white text-nature-900 border-2 border-accent-gold p-6 rounded-2xl shadow-2xl relative">
+                <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent-gold text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-widest">
+                    初回体験オファー
+                </span>
+                <p class="text-sm font-bold text-nature-600 mt-2">カウンセリング込み90分</p>
+                <p class="text-xs text-nature-500 line-through mt-1">通常60分 10,000円（税込）のところ</p>
+                <p class="text-2xl md:text-3xl font-serif font-black text-red-700 mt-2">
+                    初回特別価格！ 5,000円<span class="text-sm">（税込）</span>
+                </p>
+            </div>
+
+            <div class="space-y-4 pt-4 font-sans">
+                <a href="https://lin.ee/tkt1vfd" target="_blank" class="inline-flex items-center justify-center w-full max-w-md bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-lg md:text-xl py-5 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 gap-3">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.564.39.084.922.258 1.058.592.12.296.08.759.04 1.059l-.171 1.027c-.052.316-.252 1.238 1.084.675 1.336-.563 7.2-4.24 9.824-7.253 1.832-1.993 3.129-4.242 3.129-6.668zm-15.63 2.766h-1.56c-.34 0-.616-.277-.616-.616v-3.722c0-.34.276-.616.616-.616s.616.277.616.616v3.106h.944c.34 0 .616.277.616.616s-.276.616-.616.616zm2.427-.616c0 .34-.276.616-.616.616s-.616-.277-.616-.616v-3.722c0-.34.276-.616.616-.616s.616.277.616.616v3.722zm3.811 0c0 .243-.143.463-.365.56-.081.034-.167.051-.252.051-.159 0-.313-.061-.429-.177l-1.815-1.826v1.392c0 .34-.276.616-.616.616s-.616-.277-.616-.616v-3.722c0-.242.142-.463.364-.56.223-.097.481-.055.661.107l1.834 1.845v-1.392c0-.34.276-.616.616-.616s.616.277.616.616v3.722zm2.842-1.127h-1.28v.511h1.28c.34 0 .616.276.616.616s-.276.616-.616.616h-1.896c-.34 0-.616-.277-.616-.616v-3.722c0-.34.276-.616.616-.616h1.896c.34 0 .616.276.616.616s-.276.616-.616.616h-1.28v.48h1.28c.34 0 .616.277.616.616s-.276.617-.616.617z"/></svg>
+                    公式LINEで初回体験を予約する
+                </a>
+                <p class="text-xs text-nature-200 tracking-wide leading-relaxed">
+                    公式LINEにて、「初回体験」とメッセージを送ってください。
+                </p>
+            </div>
+
+            <div class="pt-8 grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-white/10 text-xs md:text-sm text-nature-200">
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-accent-gold">✦</span> 完全予約制・本庄市のプライベートサロン
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-accent-gold">✦</span> 医療系国家資格（理学療法士）保有
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <span class="text-accent-gold">✦</span> 身体が安心してゆるむやさしい整体
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-3xl mx-auto space-y-10">
+            <div class="text-center space-y-2">
+                <span class="text-accent-gold font-cinzel text-xs tracking-widest font-bold block uppercase">Check list</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-nature-800">こんなお悩みはありませんか？</h2>
+                <div class="w-12 h-0.5 bg-accent-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-nature-50 border border-nature-100 rounded-2xl p-6 md:p-10 space-y-4 text-nature-800">
+                <ul class="space-y-3 md:text-base text-sm leading-relaxed">
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 朝、目が覚めた瞬間から身体が重い。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> しっかり寝たはずなのに、疲れが抜けていない。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 肩や首がずっと凝っていて、いつも身体に力が入っている感じがする。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 手足が冷えやすく、身体がなかなか温まらない。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 頭がぼんやりして、集中力が続かない。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 以前より小さなミスが増えて、落ち込むことが増えた。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 夕方になる頃には、もうエネルギーが残っていない。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 家に帰ったら本当は家事もしたい、自分の時間も少しは楽しみたいのに、気づけばソファやベッドに倒れ込むように寝落ちしてしまう。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 休日も、本当はやりたいことがあるのに、身体が重くて動けない。</li>
+                    <li class="flex items-start gap-3"><span class="text-red-500 font-bold">□</span> 結局、休むだけで一日が終わってしまう。</li>
+                </ul>
+            </div>
+
+            <div class="text-center font-serif space-y-6 max-w-2xl mx-auto bg-accent-lightgold/50 p-6 md:p-8 rounded-2xl border border-accent-gold/20">
+                <p class="text-base md:text-lg font-bold text-red-800 leading-relaxed">
+                    そして夜になると、また自分を責めてしまう。<br>
+                    「今日も何もできなかった」<br>
+                    「みんなはちゃんと頑張っているのに」<br>
+                    「私が甘えているだけなのかな」<br>
+                    「もっと頑張らなきゃいけないのに」
+                </p>
+                <p class="text-sm md:text-base text-nature-700 leading-relaxed">
+                    そんなふうに、身体のつらさだけでなく、心まで苦しくなっていませんか？
+                </p>
+                <div class="pt-4 border-t border-nature-200 space-y-3 font-sans text-left text-sm text-nature-800">
+                    <p class="font-bold text-nature-600 text-center text-base">ベースとして知っておいてほしいことがあります。</p>
+                    <p class="text-center font-serif text-nature-700 leading-relaxed">
+                        朝から身体が重いこと。<br>
+                        寝ても疲れが取れないこと。<br>
+                        思うように動けないこと。
+                    </p>
+                    <p class="text-xs md:text-sm text-nature-600 leading-relaxed pt-2 text-center max-w-xl mx-auto">
+                        身体がずっと緊張モードに入り続けていたり、活動のスイッチが入りにくくなっていたり…自律神経の乱れによって、身体がうまく切り替わりにくくなっているサインかもしれません。<br>
+                        だからこそ、さらに自分を責める前に、まずは今の身体の状態を知り、やさしく整えていくことが大切です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-nature-100">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-accent-gold font-cinzel text-xs tracking-widest font-bold block uppercase">The True Cause</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-nature-800 leading-tight">
+                    疲れが抜けない原因は、<br>
+                    「気合いが足りない」わけでは<br>
+                    ないかもしれません
+                </h2>
+                <div class="w-12 h-0.5 bg-accent-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 md:p-10 shadow-lg space-y-8 text-sm md:text-base text-nature-800 leading-relaxed">
+                <p>
+                    寝ても疲れが取れない。<br>
+                    朝から身体が重い。<br>
+                    仕事中に集中力が続かない。<br>
+                    帰宅後は、もう何もする気力が残っていない。
+                </p>
+                <p class="bg-nature-50 p-4 rounded-xl font-bold text-center border-l-4 border-nature-600">
+                    触れて休んでいるはずなのに、身体の切り替えがうまくいきにくくなっているサインかもしれません。
+                </p>
+                <p>
+                    私たちの身体は、本来、活動するときと休むときで自然にスイッチを切り替えています。仕事や家事をするときは、身体を動かしやすい状態へ。夜や休む時間には、身体を回復しやすい状態へ。この切り替えに深く関わっているのが、<strong>自律神経</strong>です。<br>
+                    ところが、毎日のストレス源や緊張、頑張りすぎ、生活リズムの乱れなどが積み重なると、この切り替えがうまくいきにくくなることがあります。
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                    <div class="border border-nature-200 rounded-xl p-5 bg-orange-50/30">
+                        <h3 class="font-bold text-orange-900 border-b border-orange-200 pb-2 mb-3 text-sm md:text-base">
+                            ① 交感神経が高まりすぎ
+                        </h3>
+                        <p class="text-xs text-nature-700 space-y-1">
+                            身体はずっと「がんばりモード」「緊張モード」に。仕事が終わっても肩や首に力が入り続ける、呼吸が浅い、頭の中で考えごとが止まらない、寝る前になっても気が張って落ち着かない、ゆっくりしているのに罪悪感が出る。<br>
+                            <span class="block mt-2 font-semibold text-orange-800">→ 横になっていても、身体や脳はずっと頑張り続けている状態です。</span>
+                        </p>
+                    </div>
+                    <div class="border border-nature-200 rounded-xl p-5 bg-blue-50/30">
+                        <h3 class="font-bold text-blue-900 border-b border-blue-200 pb-2 mb-3 text-sm md:text-base">
+                            ② 副交感神経に傾きすぎ
+                        </h3>
+                        <p class="text-xs text-nature-700 space-y-1">
+                            身体が休息モードに寄りすぎて活動スイッチが入らない。朝から身体が重だるい、日中も眠気が強い、やる気が出るまでに時間がかかる、頭がぼんやりして集中できない、食後に強い眠気やだるさが出る、休日もなかなか動き出せない。<br>
+                            <span class="block mt-2 font-semibold text-blue-800">→ 休んでいるはずなのに、動ける感じが戻ってこない感覚になります。</span>
+                        </p>
+                    </div>
+                    <div class="border border-nature-200 rounded-xl p-5 bg-purple-50/30">
+                        <h3 class="font-bold text-purple-900 border-b border-purple-200 pb-2 mb-3 text-sm md:text-base">
+                            ③ 両方のバランスが乱れる
+                        </h3>
+                        <p class="text-xs text-nature-700 space-y-1">
+                            緊張とだるさが重なります。疲れているのに力が抜けない、休みたいのに頭が止まらない、寝ても疲れが抜けにくい、日中は重だるくて動きにくい。<br>
+                            <span class="block mt-2 font-semibold text-purple-800">→ 休むことも動くこともスムーズに切り替わりにくくなってしまいます。</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-nature-100 bg-nature-50 p-6 rounded-2xl">
+                    <p class="text-sm md:text-base">
+                        だからこそ、自律神経の乱れによる不調に対して大切なのは、ただ「もっと休む」「もっと運動する」「もっと頑張る」と一律に考えることではありません。<br>
+                        今の身体が、どんな方向に傾いているのか？緊張が抜けにくいのか？活動のスイッチが入りにくいのか？緊張とだだるさが重なっているのか？<br>
+                        <strong>まずはそこを見極めて、今の身体に合った整え方をしていくことが大切です。</strong>
+                    </p>
+                    <p class="mt-4 font-serif text-nature-700 font-bold text-center border-t border-accent-gold/30 pt-4 text-base md:text-lg">
+                        あなたの不調は、あなたの弱さではありません。<br>
+                        身体が出しているサインを正しく受け取り、整える順番を見直すことで、朝から動きやすい身体へ近づいていくことができます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-3xl mx-auto space-y-8">
+            <div class="text-center space-y-2">
+                <span class="text-red-700 font-cinzel text-xs tracking-widest font-bold block">Future Risk</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-nature-800">
+                    「まだ大丈夫」と<br>我慢し続けていませんか？
+                </h2>
+                <div class="w-12 h-0.5 bg-red-700 mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-6 text-sm md:text-base text-nature-800 leading-relaxed">
+                <p>
+                    朝から身体が重い。<br>
+                    寝ても疲れが取れない。<br>
+                    仕事中に集中力が続かない。<br>
+                    帰宅後は、もう何もする気力が残っていない。
+                </p>
+                <blockquote class="border-l-4 border-red-700 pl-4 py-1 italic bg-red-50/50 rounded-r-xl text-nature-700 text-sm">
+                    「このくらいで休んではいけない」<br>
+                    「みんなも頑張っているから、私も頑張らないと」<br>
+                    「もう少し我慢すれば、そのうち良くなるかもしれない」
+                </blockquote>
+                <p>
+                    しかし、身体のサインを見ないまま無理を続けてしまうと、疲れやだるさは少しずつ日常に入り込んでいきます。
+                </p>
+                <div class="bg-nature-50 p-6 rounded-2xl border border-nature-100 text-sm">
+                    <ul class="space-y-1 text-nature-700">
+                        <li>• 朝起きるのがつらくなる</li>
+                        <li>• 仕事中のミスが増える</li>
+                        <li>• 人の言葉に敏感になり、些細なことで落ち込む</li>
+                        <li>• 帰宅後に家事や趣味を楽しむ余力がない</li>
+                        <li>• 休日も回復するだけで終わってしまう</li>
+                        <li>• できなかった自分をまた責めてしまう</li>
+                    </ul>
+                </div>
+                <p>
+                    こうした日々が続くと、身体のつらさだけでなく、心の中にも少しずつ影響が出てき、「前はもっと動けていたのに」「どうしてこんなに疲れやすいんだろう」「私だけがちゃんとできていない気がする」と、<strong>自信まで失いやすくなってしまいます。</strong>
+                </p>
+                <p class="font-bold text-center font-serif text-red-900 bg-red-50 border border-red-200 p-4 rounded-xl">
+                    本当は、仕事も家事も、自分の時間も大切にしたい。やりたいことにも、もう一度前向きに取り組みたい。それなのに、身体がついてこないせいで、自分を責め続けてしまう…そんな毎日を、この先も続けてほしくありません。
+                </p>
+                <p class="text-xs md:text-sm text-center text-nature-600 leading-relaxed">
+                    不調を放っておくことが問題なのではありません。一番つらいのは、身体がサインを出しているのに、その理由がわからないまま、ずっと自分を責め続けてしまうことです。<br>
+                    だからこそ、今の身体がどんな状態になっているのかを知り、無理なく整えていくことが大切です。このまま「気合いでなんとかする」毎日を続ける前に、一度、身体の声に耳を傾けてみませんか？
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-nature-700 py-12 px-4 text-center text-white relative">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <h3 class="font-serif text-xl md:text-2xl font-bold text-accent-lightgold">
+                あなたの不調の本当の理由、一緒に見つけましょう
+            </h3>
+            <p class="text-sm text-nature-100 max-w-xl mx-auto leading-relaxed">
+                完全予約制の落ち着いた空間で、理学療法士の資格を持つ施術者があなたの身体の声に優しく耳を傾けます。枠には限りがございますので、お早めにご相談ください。
+            </p>
+            <div class="pt-2 font-sans space-y-2">
+                <a href="https://lin.ee/tkt1vfd" target="_blank" class="inline-flex items-center justify-center w-full max-w-md bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-base md:text-lg py-4 px-6 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 gap-2">
+                    公式LINEで初回体験の相談・予約をする
+                </a>
+                <p class="text-xs text-nature-200 mt-2">公式LINEにて、「初回体験」とメッセージを送ってください。</p>
+                <p class="text-xs text-nature-200 mt-1">※タップするとLINEアプリが起動します</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-20 px-4 bg-accent-lightgold/40">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-nature-600 font-cinzel text-xs tracking-widest font-bold block uppercase">Bright Future</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-nature-800">
+                    身体が整うと、毎日の景色が少しずつ変わっていきます
+                </h2>
+                <div class="w-12 h-0.5 bg-nature-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm md:text-base text-nature-800 leading-relaxed">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-nature-100 space-y-4">
+                    <h3 class="font-serif font-bold text-lg text-nature-700 flex items-center gap-2">
+                        <span class="text-accent-gold">☀</span> 朝、すっきりと目覚める喜び
+                    </h3>
+                    <p class="text-sm leading-relaxed text-nature-700">
+                        朝、目が覚めたときに、身体が少し軽い。「今日もつらい一日が始まる」ではなく、「今日は少し動けそう」と思える。それだけでも、毎日の始まり方は大きく変わります。
+                    </p>
+                    <p class="text-sm leading-relaxed text-nature-700">
+                        朝からシャキッと動けるようになると、仕事に向かう気持ちにも余裕が生まれます。頭がぼんやりしにくくなり集中できる。小さなミスに落ち込み続けるのではなく落ち着ける。肩や首の重さがやわらぎ呼吸が入りやすくなる。身体がゆるむことで心に余白が戻ってきます。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-nature-100 space-y-4">
+                    <h3 class="font-serif font-bold text-lg text-nature-700 flex items-center gap-2">
+                        <span class="text-accent-gold">🌙</span> 夜、自分の時間を楽しむ余力
+                    </h3>
+                    <p class="text-sm leading-relaxed text-nature-700">
+                        今までは帰宅したら何もできずに寝落ちしていたかもしれません。でも、身体に余力が戻ってくると、帰ってからの時間にも変化が出ます。
+                    </p>
+                    <ul class="text-xs md:text-sm space-y-1 text-nature-700 bg-nature-50 p-3 rounded-xl">
+                        <li>• 家事をひとつ片づけられる</li>
+                        <li>• 温かい飲み物をゆっくり飲める</li>
+                        <li>• 好きな動画や本を楽しめる</li>
+                        <li>• 明日のために早めにお風呂に入り眠る準備ができる</li>
+                    </ul>
+                    <p class="text-sm leading-relaxed text-nature-700">
+                        「今日も何もできなかった」と責めるのではなく、「今日はこれができた」と思える日が増えていく。それは、とても大きな変化です。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl border border-accent-gold max-w-3xl mx-auto space-y-4 text-sm md:text-base text-nature-800">
+                <p class="leading-relaxed">
+                    休日も、ただ疲れを回復するだけで終わるのではなく、少し外に出てみよう、会いたい人に連絡してみよう、ずっと後回しにしていたことに少しだけ手をつけてみようと思えるようになり、やりたいことに向かう気力も戻りやすくなります。
+                </p>
+                <p class="leading-relaxed">
+                    もちろん、一度で何もかもが変わるわけではありません。長く続いてきた疲れやだるさほど、積み重なった緊張やリズムの乱れがあります。微細な変化を味わい、必要な順番で整えていくことで、少しずつ変化は生まれていきます。
+                </p>
+                <div class="text-center font-serif font-bold text-nature-700 pt-2 border-t border-nature-100 text-base leading-relaxed">
+                    ずっしり重い身体から、朝から動きやすい身体へ。<br>
+                    抜けない怠さに振り回される毎日から、仕事後にも少し余力が残る毎日へ。<br>
+                    自分を責め続ける日々から、身体を大切にしながら前に進める日々へ。
+                </div>
+                <p class="text-xs text-center text-nature-500 pt-2 leading-relaxed">
+                    プライベートサロン Natureが目指しているのは、ただその場だけ楽になることではありません。あなたが、本来の元気を取り戻し、やりたいことに前向きに向かえる毎日を取り戻すことです。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-nature-50 p-6 md:p-12 rounded-3xl border border-nature-100">
+                
+                <div class="lg:col-span-4 flex flex-col items-center space-y-4">
+                    <div class="w-40 h-40 rounded-full border-4 border-accent-gold overflow-hidden bg-nature-600 flex items-center justify-center text-white shadow-xl">
+                        <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-xs text-nature-500 tracking-wider">プライベートサロン Nature</p>
+                        <h3 class="font-serif font-bold text-xl text-nature-800">佐川 大輔</h3>
+                        <p class="text-xs text-accent-gold font-bold mt-1">医療系国家資格（理学療法士）保有</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8 space-y-4 text-sm md:text-base text-nature-800 leading-relaxed font-sans">
+                    <h4 class="font-serif font-bold text-lg text-nature-700 border-b border-nature-200 pb-2">
+                        私自身も、疲れやだるさが抜けずに悩んでいました
+                    </h4>
+                    <p>
+                        はじめまして。プライベートサロン Natureの佐川大輔です。私は現在、埼玉県本庄市で自律神経調整に特化した整体院を運営しています。<br>
+                        でも実は、私自身も以前、疲れやだるさが抜けず、家ではまともに動けないような時期がありました。
+                    </p>
+                    <p class="text-xs md:text-sm bg-white/80 p-4 rounded-xl border border-nature-200/60 text-nature-700 leading-relaxed">
+                        寝ても疲れが取れない。朝から身体が重い。仕事では集中力が続かず、ミスも増える。家に帰ると、もう何かをする気力が残っていない。休日も、本当はやりたいことがあるのに、結局ダラダラと過ごしてしまう。そして夜になると、「今日も何もできなかった」「自分はなんでこんなにダメなんだろう」と、また自分を責めてしまう。そんな毎日を過ごしていました。
+                    </p>
+                    <p>
+                        だから、身体が思うように動かないつらさも、疲れているのに休んだ気がしない苦しさも、何もできなかった自分を責めてしまう気持ちも、私は少しわかるつもりです。<br>
+                        一部、身体が出しているサインを正しく受け取る必要性を身をもって実感しています。寝ても疲れが取れないのは、決してあなたの甘えではないということです。やる気がないから動けないのではありません。気合いが足りないから、疲れが抜けないのでもありません。身体が緊張モードに入り続けていたり、活動スイッチが入りにくくなっている状態に理由があるかもしれません。
+                    </p>
+                    <p class="text-xs pt-2 text-nature-600 leading-relaxed">
+                        私は、医療系国家資格（理学療法士）保有者として身体について学び、現場で多くの方の身体と向き合ってきました。その経験をもとに、現在は当サロンで、自律神経の乱れによる疲れ・だるさ・肩こり・冷えなどに悩む方へ、身体全体を見ながら整える整体を行っています。
+                    </p>
+                    <p class="text-xs font-bold text-nature-700 leading-relaxed">
+                        私が大切にしているのは、ただ強く押したり、つらい場所だけを一時的に楽にすることではありません。今の身体の状態や、なぜ抜けにくくなっているのかを一緒に確認しながら、無理なく整えていくことです。ずっと頑張ってきた身体にさらにムチを打つのではなく、安心して力を抜ける状態へ。本来の元気を取り戻せる状態への道のりを、私が一緒にサポートします。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-nature-600 text-white">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-accent-gold font-cinzel text-xs tracking-widest font-bold block uppercase">Our Approach</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-white">
+                    自律神経の乱れを、身体全体からやさしく整えていきます
+                </h2>
+                <p class="text-xs md:text-sm text-nature-200 max-w-2xl mx-auto mt-2 leading-relaxed">
+                    自律神経の乱れによる不調は、単に「肩がこっているから肩だけをほぐす」というものではありません。全体の緊張や、呼吸、血流、内臓の働き、生活リズムなどが関係しているからこそ、身体全体の状態を確認しながら整えていきます。
+                </p>
+                <div class="w-12 h-0.5 bg-accent-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-nature-900 font-sans">
+                
+                <div class="bg-white rounded-2xl p-6 md:p-8 space-y-4 shadow-xl flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-accent-gold block font-cinzel">Pillar 01</span>
+                        <h3 class="font-serif font-bold text-lg text-nature-800 border-b border-nature-100 pb-2 leading-snug">
+                            頑張りすぎてこわばった身体を、やさしくゆるめる
+                        </h3>
+                        <p class="text-xs text-nature-700 leading-relaxed">
+                            無意識のうちに肩や首に力が入る、背中が張る、呼吸が浅い、食いしばりがある、寝る前になっても身体や頭が落ち着かない。<br>
+                            このような状態は、横になっていても身体や脳はずっと頑張り続けているようなものです。
+                        </p>
+                        <p class="text-xs text-nature-700 leading-relaxed">
+                            当サロンでは、強く押したり無理に動かしたりせず、身体が安心して力を抜けるようにやさしく整えます。無意識の緊張をゆるめ、頭蓋骨や内臓の状態も見ながら、全体の緊張が抜けやすい状態へ導きます。「頑張らなきゃ」と力を入れるのではなく、まずは安心して休める土台を作ります。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 md:p-8 space-y-4 shadow-xl flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-accent-gold block font-cinzel">Pillar 02</span>
+                        <h3 class="font-serif font-bold text-lg text-nature-800 border-b border-nature-100 pb-2 leading-snug">
+                            呼吸・血流・内臓の働きを整え、回復しやすい土台を作る
+                        </h3>
+                        <p class="text-xs text-nature-700 leading-relaxed">
+                            自律神経は呼吸、血流、体温調整、胃腸の働き、睡眠などに関わっています。<br>
+                            呼吸が浅いままだとリラックスしにくく、血流滞留は冷えやだるさに、胃腸の乱れは食後の眠気や重さに、睡眠の質の低下は疲れの蓄積に繋がります。
+                        </p>
+                        <p class="text-xs text-nature-700 leading-relaxed">
+                            こうした身体のつながりを見ながら、呼吸が入りやすく、血流がめぐり、内臓も働きやすい状態を目指して整えます。必要に応じて物理療法機器によるアプローチや生活習慣の見直しも組み合わせ、身体の内側から回復しやすい状態を整えてしていきます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 md:p-8 space-y-4 shadow-xl flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold uppercase tracking-widest text-accent-gold block font-cinzel">Pillar 03</span>
+                        <h3 class="font-serif font-bold text-lg text-nature-800 border-b border-nature-100 pb-2 leading-snug">
+                            自宅でも整いやすいように、タイプに合ったセルフケアを伝える
+                        </h3>
+                        <div class="text-xs text-nature-700 leading-relaxed space-y-1">
+                            <p>そのときだけ楽になるのではなく、日常でも整うことを大切にしています。乱れ方は人それぞれです。</p>
+                            <p>• <strong>頑張りすぎタイプ:</strong> 緊張しやすく、力を抜く時間必要</p>
+                            <p>• <strong>ぼんやりタイプ:</strong> スイッチが入りにくく、朝の光や軽い動きが必要</p>
+                            <p>• <strong>ぐったりタイプ:</strong> 緊張とだるさが重なるため、まずリズムの土台が必要</p>
+                            <p>• <strong>いきいきタイプ:</strong> 良い状態を維持するため、疲れきる前の習慣が必要</p>
+                        </div>
+                        <p class="text-xs text-nature-700 leading-relaxed">
+                            今の身体に合わせ、呼吸の整え方、力を抜くケア、朝の過ごし方、睡眠リズムの見直しなど、無理なく続けやすいセルフケアをお伝えします。小さなケアを積み重ねることで、身体は少しずつ整いやすくなっていきます。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center bg-nature-700 p-6 rounded-2xl border border-white/10 text-sm max-w-3xl mx-auto leading-relaxed">
+                自律神経の不調で悩んでいる方に必要なのは、さらに無理をして頑張ることではありません。今の身体に合った方法で、緊張をゆるめ、回復しやすい土台を作り、毎日の中で整えやすい習慣を育てていくことです。当サロンがやさしくサポートしていきます。
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-nature-600 font-cinzel text-xs tracking-widest font-bold block uppercase">Flow</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-nature-800">
+                    初回体験では、今の身体の状態を丁寧に確認していきます
+                </h2>
+                <div class="w-12 h-0.5 bg-nature-600 mx-auto mt-4"></div>
+            </div>
+
+            <p class="text-sm md:text-base text-center text-nature-700 max-w-2xl mx-auto leading-relaxed">
+                「整体に行ってみたいけれど、何をされるのかわからなくて不安」<br>
+                「自律神経の不調って整体でどう見てもらえるの？」<br>
+                「自分の疲れやだるさも相談していいのかな？」<br>
+                そんな不安がある方もご安心ください。
+            </p>
+
+            <div class="space-y-6 max-w-3xl mx-auto text-sm md:text-base text-nature-800 leading-relaxed font-sans">
+                
+                <div class="border border-nature-100 rounded-2xl p-6 bg-nature-50 flex flex-col md:flex-row gap-4 items-start">
+                    <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded text-xs tracking-wider uppercase">Step 01</span>
+                    <div class="space-y-2 flex-1">
+                        <h3 class="font-bold text-nature-800 text-base md:text-lg">丁寧なカウンセリング</h3>
+                        <p class="text-xs md:text-sm text-nature-700 leading-relaxed">
+                            いきなり施術を始めるのではなく、まずはカウンセリングでお聞きします。いつ頃から抜けにくくなったのか、眠りの深さはどうか、肩こり・冷え・胃腸の不調はあるか、どの場面が一番つらいのか、普段の生活リズムなどを確認し、今の状態を一緒に見ていきます。症状だけを見るのではなく、生活の背景も含めて確認します。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-nature-100 rounded-2xl p-6 bg-nature-50 flex flex-col md:flex-row gap-4 items-start">
+                    <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded text-xs tracking-wider uppercase">Step 02</span>
+                    <div class="space-y-2 flex-1">
+                        <h3 class="font-bold text-nature-800 text-base md:text-lg">身体全体の状態確認</h3>
+                        <p class="text-xs md:text-sm text-nature-700 leading-relaxed">
+                            カウンセリングのあとは、実際に身体の状態を確認します。肩や首、背中の緊張、呼吸の入りやすさ、冷えや血流の状態、頭蓋骨や内臓の状態、姿勢や身体のこわばりなど、全体を見ながら今の不調につながっている要因を探っていきます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-nature-100 rounded-2xl p-6 bg-nature-50 flex flex-col md:flex-row gap-4 items-start">
+                    <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded text-xs tracking-wider uppercase">Step 03</span>
+                    <div class="space-y-2 flex-1">
+                        <h3 class="font-bold text-nature-800 text-base md:text-lg">やさしい施術</h3>
+                        <p class="text-xs md:text-sm text-nature-700 leading-relaxed">
+                            強く押したり、無理に動かしたりする整体ではありません。身体が安心して力を抜けるようにやさしく施術を行います。こわばった身体が少しずつゆるみ、呼吸が入りやすくなり、回復しやすい状態へ向かえるように整えます。必要に応じて物理療法機器や生活習慣の見直しも組み合わせます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-nature-100 rounded-2xl p-6 bg-nature-50 flex flex-col md:flex-row gap-4 items-start">
+                    <span class="bg-nature-600 text-white font-bold px-3 py-1 rounded text-xs tracking-wider uppercase">Step 04</span>
+                    <div class="space-y-2 flex-1">
+                        <h3 class="font-bold text-nature-800 text-base md:text-lg">状態説明とセルフケア提案</h3>
+                        <p class="text-xs md:text-sm text-nature-700 leading-relaxed">
+                            施術後には、どこに緊張が出やすいのか、なぜ抜けにくくなっているのか、これから何を整えていくとよいのか、自宅ではどんなケアから始めるとよいのかを、専門用語を使わず、日常生活の中でイメージしやすい形でお伝えします。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center font-serif text-nature-800 max-w-2xl mx-auto pt-6 border-t border-nature-100 space-y-2 text-sm md:text-base leading-relaxed">
+                <p class="font-bold text-nature-700 text-base">
+                    初回体験は、ただ一度身体を楽にするためだけの時間ではありません。
+                </p>
+                <p>
+                    あなたの身体が今どのような状態にあるのか？そして、朝から動きやすい身体へ近づくために、どこから整えていけばいいのかを一緒に確認するための時間です。
+                </p>
+                <p class="text-accent-gold font-bold pt-2 text-base">
+                    「この疲れやだるさを、そろそろ本気で整えたい」<br>
+                    「朝からもう少し軽く動けるようになりたい」<br>
+                    そう感じている方は、まずは初回体験で身体の状態を確認してみてください。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-accent-lightgold/60 border-t border-b border-accent-gold/20">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-nature-600 font-cinzel text-xs tracking-widest font-bold block uppercase">Experience Menu</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-nature-800">初回体験のご案内</h2>
+                <div class="w-12 h-0.5 bg-nature-600 mx-auto mt-4"></div>
+                <p class="text-xs text-nature-700 pt-2 max-w-md mx-auto leading-relaxed">
+                    初めての方に向けて、カウンセリング込みの初回体験を特別価格でご用意しています。お悩みや身体の緊張、冷え、呼吸、睡眠の状態などを丁寧に確認していきます。
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-white rounded-3xl p-6 md:p-10 shadow-xl border-2 border-accent-gold text-center space-y-6">
+                <div>
+                    <span class="bg-accent-gold text-white font-bold text-xs tracking-widest px-4 py-1 rounded-full uppercase">
+                        特別コース
+                    </span>
+                    <h3 class="font-serif font-black text-2xl md:text-3xl text-nature-800 mt-3">
+                        初回体験（カウンセリング込み90分）
+                    </h3>
+                </div>
+                
+                <div class="bg-nature-50 p-4 rounded-xl text-left text-xs md:text-sm text-nature-800 space-y-2 font-sans">
+                    <p class="font-bold text-center border-b border-nature-200 pb-2 text-nature-700">【初回体験で確認すること】</p>
+                    <ul class="space-y-1 leading-relaxed">
+                        <li>• 今の疲れやだるさが、どのような状態から起きているのか？</li>
+                        <li>• 身体が緊張モードに入りやすいか？活動スイッチが入りにくいのか？</li>
+                        <li>• 肩こりや冷え、胃腸の不調、睡眠の浅さがどう関係しているのか？</li>
+                        <li>• 自宅では、どんなセルフケアから始めるとよいのか？</li>
+                    </ul>
+                </div>
+
+                <div class="border-t border-b border-nature-100 py-4">
+                    <p class="text-xs md:text-sm text-nature-500 line-through">通常60分 10,000円（税込）のところ</p>
+                    <p class="text-3xl md:text-5xl font-serif font-black text-red-700 mt-1">
+                        初回特別価格 5,000円<span class="text-sm md:text-base font-sans">（税込）</span>
+                    </p>
+                </div>
+
+                <div class="text-left text-xs md:text-sm text-nature-800 space-y-2 font-sans">
+                    <p class="font-bold text-nature-700 text-center">【こんな方におすすめです】</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 leading-relaxed">
+                        <div>✔ 寝ても疲れが取れない方</div>
+                        <div>✔ 朝から身体が重い方</div>
+                        <div>✔ 肩こりや首こりが慢性化している方</div>
+                        <div>✔ 冷えや胃腸の不調が気になる方</div>
+                        <div>✔ 工作・仕事中に集中力が続きにくい方</div>
+                        <div>✔ 帰宅後に何もする気力が残らない方</div>
+                        <div>✔ 不調がどこから来ているのか知りたい方</div>
+                        <div>✔ 身体全体から整えていきたい方</div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-nature-100 space-y-4 font-sans">
+                    <p class="text-xs md:text-sm font-bold text-nature-700 leading-relaxed">
+                        ご予約は公式LINEから受け付けています。
+                    </p>
+                    <a href="https://lin.ee/tkt1vfd" target="_blank" class="inline-flex items-center justify-center w-full max-w-md bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-lg py-4 px-6 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 gap-2">
+                        公式LINEから初回体験を予約する
+                    </a>
+                    <p class="text-xs text-nature-700 font-bold leading-relaxed">
+                        公式LINEにて、「初回体験」とメッセージを送ってください。
+                    </p>
+                    <p class="text-xs text-red-700 font-semibold leading-relaxed">
+                        ※カウンセリング込みで丁寧に対応しているため、初回体験の受付枠には限りがあります。ご希望の方はお早めにご連絡ください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-nature-600 font-cinzel text-xs tracking-widest font-bold block uppercase">Voice</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-nature-800">
+                    お客様から、このようなお声をいただいています
+                </h2>
+                <p class="text-xs text-nature-500 mt-1">
+                    長年の肩こりや、疲れやだるさ、眠りの浅さなどで悩まれていた方々のリアルなお声です。
+                </p>
+                <div class="w-12 h-0.5 bg-nature-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-6 max-w-3xl mx-auto text-sm text-nature-800 leading-relaxed">
+                
+                <div class="border border-nature-100 bg-nature-50 p-6 rounded-2xl space-y-3 font-sans">
+                    <div class="flex justify-between items-center border-b border-nature-200 pb-2">
+                        <h3 class="font-serif font-bold text-base md:text-lg text-nature-800">
+                            50年以上悩んでいた肩こりが、気にならなくなりました
+                        </h3>
+                        <span class="text-xs bg-accent-gold/20 text-nature-800 px-3 py-0.5 rounded-full font-medium whitespace-nowrap shrink-0">70代女性</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-nature-700 leading-relaxed">
+                        50年以上、肩こりに悩み続けていました。これまでに、整体や接骨院、鍼灸院など、いろいろなところに通ってきましたが、なかなか思うような変化を感じられませんでした。でも、プライベートサロン Natureで施術を受けてから、肩こりを感じなくなり、身体がとても軽くなりました。
+                    </p>
+                    <p class="font-bold font-serif text-nature-800 italic text-center bg-white py-2 rounded-lg border border-nature-200/50 text-sm md:text-base">
+                        「もっと早く出会いたかった整体院です」
+                    </p>
+                    <p class="text-[11px] text-nature-500 pt-1 leading-relaxed">
+                        ※長年続いている肩こりでも、肩だけではなく、身体全体の緊張や自律神経の状態を見ながら整えていくことで、変化のきっかけが見えてくることがあります。
+                    </p>
+                </div>
+
+                <div class="border border-nature-100 bg-nature-50 p-6 rounded-2xl space-y-3 font-sans">
+                    <div class="flex justify-between items-center border-b border-nature-200 pb-2">
+                        <h3 class="font-serif font-bold text-base md:text-lg text-nature-800">
+                            慢性的な疲労感が軽くなり、今が人生で一番楽しいと思えるように
+                        </h3>
+                        <span class="text-xs bg-accent-gold/20 text-nature-800 px-3 py-0.5 rounded-full font-medium whitespace-nowrap shrink-0">60代女性</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-nature-700 leading-relaxed">
+                        ご主人を亡くされてからの3年間、慢性的な疲労感や、感情が平らになってしまったような感覚、気持ちの落ち込みに悩まれていました。身体も心も重く、毎日を楽しむ余裕が持てない状態が続いていたそうです。施術を重ねる中で、少しずつ感情が出せるようになり、疲労感も感じにくくなっていきました。
+                    </p>
+                    <p class="font-bold font-serif text-nature-800 text-center bg-white py-2 rounded-lg border border-nature-200/50 text-sm md:text-base">
+                        「今が人生の中で一番楽しい！」
+                    </p>
+                    <p class="text-[11px] text-nature-500 pt-1 leading-relaxed">
+                        ※身体が整ってくると、ただ症状が軽くなるだけではなく、気持ちにも少しずつ余白が戻ってくることがあります。
+                    </p>
+                </div>
+
+                <div class="border border-nature-100 bg-nature-50 p-6 rounded-2xl space-y-3 font-sans">
+                    <div class="flex justify-between items-center border-b border-nature-200 pb-2">
+                        <h3 class="font-serif font-bold text-base md:text-lg text-nature-800">
+                            施術を受けた日の夜、朝までぐっすり眠れました
+                        </h3>
+                        <span class="text-xs bg-accent-gold/20 text-nature-800 px-3 py-0.5 rounded-full font-medium whitespace-nowrap shrink-0">50代女性</span>
+                    </div>
+                    <p class="text-xs md:text-sm text-nature-700 leading-relaxed">
+                        夜の眠りが浅く、何度も目が覚めてしまう。朝も眠気が強く、スッキリ起きられない。そんな睡眠のお悩みを抱えていました。施術を受けた日の夜、朝までぐっすり眠ることができ、翌朝もスッキリ起きられたとお話しくださいました。
+                    </p>
+                    <p class="text-[11px] text-nature-500 pt-1 border-t border-nature-200/60 leading-relaxed">
+                        ※眠りの浅さや朝のだるさは身体の緊張や自律神経の切り替えに関係していることがあります。安心してゆるみ、呼吸が入りやすくなることで休むためのスイッチが入りやすくなる方もいます。
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-nature-50 rounded-xl p-5 border border-nature-100 text-xs text-nature-600 space-y-2 leading-relaxed">
+                <p class="font-semibold text-center text-nature-700">【変化の出方には個人差があります】</p>
+                <p>
+                    お身体の状態や、これまでの不調の期間、生活習慣によって、変化の出方には個人差があります。一度で大きく変化を感じる方もいれば、少しずつ変わっていく方もいます。大切なのは、今の身体の状態を知り、その状態に合った整え方をしていくことです。
+                </p>
+                <p class="font-medium text-center font-serif text-nature-800 text-xs md:text-sm pt-1 border-t border-nature-200/50 leading-relaxed">
+                    長く続いている疲れやだるさ、肩こり、眠りの浅さも、あなたの甘えではありません。朝から動きやすい身体へ向かうための一歩を見つけていきましょう。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-nature-50 border-t border-nature-100">
+        <div class="max-w-3xl mx-auto space-y-12">
+            <div class="text-center space-y-2">
+                <span class="text-nature-600 font-cinzel text-xs tracking-widest font-bold block uppercase">FAQ</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-nature-800">よくあるご質問</h2>
+                <p class="text-xs text-nature-500 mt-1">初回体験を受ける前に、不安に感じやすいことをまとめました。</p>
+                <div class="w-12 h-0.5 bg-nature-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-6 text-sm md:text-base text-nature-800 font-sans">
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-nature-100 space-y-2">
+                    <h3 class="font-bold text-nature-800 flex items-start gap-2 text-base">
+                        <span class="text-accent-gold font-cinzel font-bold">Q.</span> 強い刺激の整体ですか？
+                    </h3>
+                    <p class="text-xs md:text-sm text-nature-700 pl-6 leading-relaxed">
+                        <span class="font-bold text-nature-800 block mb-1">A. いいえ。身体に負担の少ない施術です。</span>
+                        プライベートサロン Natureでは、強く押したり、無理に動かしたりする施術ではなく、身体が安心して力を抜けるようにやさしく整えていきます。無意識に力が入り続けて刺激に敏感になっていることがあるため、強い刺激での施術はほとんど行わず、さする、揺らすなどの身体の負担の少ない施術を中心に調整をしていきます。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-nature-100 space-y-2">
+                    <h3 class="font-bold text-nature-800 flex items-start gap-2 text-base">
+                        <span class="text-accent-gold font-cinzel font-bold">Q.</span> 疲れやだるさだけでも相談できますか？
+                    </h3>
+                    <p class="text-xs md:text-sm text-nature-700 pl-6 leading-relaxed">
+                        <span class="font-bold text-nature-800 block mb-1">A. はい、ご相談いただけます。</span>
+                        「痛みが強いわけではないけれど、寝ても疲れが取れない」「朝から重くて仕事や家事がつらい」「何から整えればいいかわからない」このような状態でも確認していきます。全体の緊張、呼吸、血流、冷え、内臓の働き、睡眠なども含めて確認します。<br>
+                        <span class="block mt-2 text-[11px] text-nature-500">※ただし、医療的な診断や治療を行う場所ではありません。強い動悸、胸痛、息苦しさ、急な麻痺、激しい頭痛、長引く不眠、強い気分の落ち込みなどがある場合は、まず医療機関への相談をおすすめします。</span>
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-nature-100 space-y-2">
+                    <h3 class="font-bold text-nature-800 flex items-start gap-2 text-base">
+                        <span class="text-accent-gold font-cinzel font-bold">Q.</span> 病院に通っていても受けられますか？
+                    </h3>
+                    <p class="text-xs md:text-sm text-nature-700 pl-6 leading-relaxed">
+                        <span class="font-bold text-nature-800 block mb-1">A. 状態によりますが、病院に通っている方でもご相談いただけます。</span>
+                        ただし、現在治療中の病気がある方、医師から運動や施術などに制限を受けている方、強い症状がある方は、事前に医師へご相談ください。当サロンでは医療行為や診断は行わず、整体として身体の緊張や生活習慣、セルフケアなどの面からサポートしていきます。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-nature-100 space-y-2">
+                    <h3 class="font-bold text-nature-800 flex items-start gap-2 text-base">
+                        <span class="text-accent-gold font-cinzel font-bold">Q.</span> 初回体験では何をしますか？
+                    </h3>
+                    <p class="text-xs md:text-sm text-nature-700 pl-6 leading-relaxed">
+                        <span class="font-bold text-nature-800 block mb-1">A. カウンセリング、状態確認、施術、アフターケア説明を行います。</span>
+                        まず今のお悩みや生活の状態を丁寧にお聞きし、どのような状態になっているのか一緒に見ていきます。その後、緊張や呼吸、血流、冷え、頭蓋骨や内臓の状態などを確認し、やさしく施術を行います。施術後には今の状態やセルフケアをお伝えします。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-nature-100 space-y-2">
+                    <h3 class="font-bold text-nature-800 flex items-start gap-2 text-base">
+                        <span class="text-accent-gold font-cinzel font-bold">Q.</span> どのくらい通う必要がありますか？
+                    </h3>
+                    <p class="text-xs md:text-sm text-nature-700 pl-6 leading-relaxed">
+                        <span class="font-bold text-nature-800 block mb-1">A. お身体の状態やお悩みの期間、生活習慣によって個人差があります。</span>
+                        長く続いている不調などは日々の積み重ねが関係しているため、数回で大きく変化を感じる方もいれば、少しずつ整えていく必要がある方もいます。初回体験にて今の状態を確認したうえで、必要な通い方や整え方を無理のない範囲でご提案します。無理な継続を強くすすめることはありませんので、ご安心ください。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-nature-100 space-y-2">
+                    <h3 class="font-bold text-nature-800 flex items-start gap-2 text-base">
+                        <span class="text-accent-gold font-cinzel font-bold">Q.</span> 服装はどうすればいいですか？
+                    </h3>
+                    <p class="text-xs md:text-sm text-nature-700 pl-6 leading-relaxed">
+                        <span class="font-bold text-nature-800 block mb-1">A. 動きやすく、リラックスできる服装がおすすめです。</span>
+                        当サロンでは施術着などは用意していません。スカートやショートパンツでの来店はご遠慮ください。また、リラックスしていただくために、柔らかい素材のパンツや締め付けの少ない服装でお越しいただくことをおすすめしています。
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-nature-100 space-y-2">
+                    <h3 class="font-bold text-nature-800 flex items-start gap-2 text-base">
+                        <span class="text-accent-gold font-cinzel font-bold">Q.</span> 予約はどうすればいいですか？
+                    </h3>
+                    <p class="text-xs md:text-sm text-nature-700 pl-6 leading-relaxed">
+                        <span class="font-bold text-nature-800 block mb-1">A. ご予約は公式LINEから受け付けています。</span>
+                        公式LINEにて、「初回体験」とメッセージを送ってください。現在のお悩みやご希望日時を確認しながら、ご案内させていただきます。<br>
+                        <a href="https://lin.ee/tkt1vfd" target="_blank" class="text-nature-600 font-bold underline mt-1 block">▶公式LINEはこちら: https://lin.ee/tkt1vfd</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-gradient-to-b from-nature-800 via-nature-900 to-black text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(44,76,56,0.3)_0%,transparent_70%)] pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto z-10 relative space-y-10">
+            <div class="space-y-4">
+                <h2 class="font-serif text-xl md:text-3xl font-bold leading-tight text-accent-lightgold">
+                    このまま自分を責め続ける前に、<br class="md:hidden">一度身体の状態を確認してみませんか？
+                </h2>
+                <div class="w-12 h-0.5 bg-accent-gold mx-auto"></div>
+            </div>
+
+            <div class="text-sm md:text-base text-nature-200 max-w-2xl mx-auto space-y-4 leading-relaxed text-left font-serif p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm">
+                <p>
+                    朝から身体が重い。<br>
+                    寝ても疲れが取れない。<br>
+                    肩こりや冷えが続いている。<br>
+                    仕事中に集中力が続かない。<br>
+                    帰宅後は、もう何もする気力が残っていない。<br>
+                    そんな毎日が続いていると、身体だけでなく心まで少しずつ苦しくなっていきます。
+                </p>
+                <p>
+                    でも、その不調は、あなたの甘えではないかもしれません。気合いが足りないのではなく、身体が緊張モードに入り続けていたり、活動のスイッチが入りにくくなっていたり…自律神経の乱れによって、身体がうまく切り替わりにくくなっているサインかもしれません。
+                </p>
+                <p class="text-white font-bold text-center border-t border-white/10 pt-3 font-sans text-sm md:text-base">
+                    だからこそ、さらに頑張ろうとする前に、まずは今の身体がどんな状態になっているのかを、一緒に確認してみませんか？
+                </p>
+            </div>
+
+            <p class="text-xs md:text-sm text-nature-300 max-w-xl mx-auto leading-relaxed">
+                初回体験では、カウンセリングと施術を通して、疲れやだるさの背景にある身体の状態を丁寧に見ていきます。そして、何から整えていくとよいのかをわかりやすくお伝えします。<br>
+                <span class="text-white font-bold text-sm md:text-base block mt-2">ずっしり重い身体と、抜けない怠さから解放されて、朝からシャキッと動ける本来の元気な毎日へ。</span>
+            </p>
+
+            <div class="max-w-md mx-auto bg-white text-nature-900 p-6 rounded-2xl shadow-2xl space-y-4 border-2 border-accent-gold font-sans">
+                <p class="text-xs font-bold text-accent-gold uppercase tracking-wider">Final Offer</p>
+                <h4 class="font-serif font-bold text-lg border-b border-nature-100 pb-2 text-nature-800">
+                    初回体験（カウンセリング込み90分）
+                </h4>
+                <div>
+                    <p class="text-xs text-nature-400 line-through">通常60分 10,000円（税込）のところ</p>
+                    <p class="text-2xl md:text-3xl font-serif font-black text-red-700">
+                        初回特別価格 5,000円<span class="text-xs font-sans">（税込）</span>
+                    </p>
+                </div>
+                <div class="pt-2 text-xs border-t border-nature-100 text-nature-600 leading-relaxed">
+                    ご予約は公式LINEから。LINEにて「初回体験」とメッセージを送ってください。<br>
+                    <span class="text-red-600 font-bold block mt-1">※完全予約制のため、受付枠には限りがあります。お早めにご連絡ください。</span>
+                </div>
+            </div>
+
+            <div class="space-y-4 font-sans">
+                <a href="https://lin.ee/tkt1vfd" target="_blank" class="inline-flex items-center justify-center w-full max-w-md bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-lg md:text-xl py-5 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 gap-3">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.564.39.084.922.258 1.058.592.12.296.08.759.04 1.059l-.171 1.027c-.052.316-.252 1.238 1.084.675 1.336-.563 7.2-4.24 9.824-7.253 1.832-1.993 3.129-4.242 3.129-6.668zm-15.63 2.766h-1.56c-.34 0-.616-.277-.616-.616v-3.722c0-.34.276-.616.616-.616s.616.277.616.616v3.106h.944c.34 0 .616.277.616.616s-.276.616-.616.616zm2.427-.616c0 .34-.276.616-.616.616s-.616-.277-.616-.616v-3.722c0-.34.276-.616.616-.616s.616.277.616.616v3.722zm3.811 0c0 .243-.143.463-.365.56-.081.034-.167.051-.252.051-.159 0-.313-.061-.429-.177l-1.815-1.826v1.392c0 .34-.276.616-.616.616s-.616-.277-.616-.616v-3.722c0-.242.142-.463.364-.56.223-.097.481-.055.661.107l1.834 1.845v-1.392c0-.34.276-.616.616-.616s.616.277.616.616v3.722zm2.842-1.127h-1.28v.511h1.28c.34 0 .616.276.616.616s-.276.616-.616.616h-1.896c-.34 0-.616-.277-.616-.616v-3.722c0-.34.276-.616.616-.616h1.896c.34 0 .616.276.616.616s-.276.616-.616.616h-1.28v.48h1.28c.34 0 .616.277.616.616s-.276.617-.616.617z"/></svg>
+                    公式LINEで初回体験を申し込む
+                </a>
+                <p class="text-xs text-nature-200 leading-relaxed">
+                    公式LINEにて、「初回体験」とメッセージを送ってください。
+                </p>
+            </div>
+
+            <div class="pt-12 border-t border-white/10 max-w-xl mx-auto space-y-3 font-serif">
+                <h4 class="text-accent-gold font-bold text-lg">最後に</h4>
+                <p class="text-sm md:text-base leading-relaxed text-nature-100">
+                    今の不調は、あなたの弱さではありません。ずっと頑張ってきた身体が出しているサインかもしれません。<br>
+                    そのサインを責めるのではなく、やさしく受け取り、整えるきっかけにしていきましょう。
+                </p>
+                <p class="text-xs md:text-sm text-accent-gold font-bold pt-2">
+                    プライベートサロン Natureで、あなたの身体の状態を一緒に確認できることを楽しみにしています。
+                </p>
+            </div>
+        </div>
+
+        <footer class="mt-20 border-t border-white/5 pt-6 text-center text-[10px] text-nature-500 font-sans tracking-widest">
+            <p>&copy; 2026 Private Salon Nature. All Rights Reserved.</p>
+        </footer>
+    </section>
+
+</body>
+</html>
